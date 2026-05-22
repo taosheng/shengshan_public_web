@@ -205,12 +205,69 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container img {
+        height: auto;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 10px auto;
+    }
+
+    .logo-container h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+    .nav-links a {
+        margin: 5px 12px;
+        font-size: 16px;
+    }
+
     .ai-team-member {
         flex-direction: column;
         align-items: center;
     }
+    
     .ai-team-member img {
         margin-right: 0;
         margin-bottom: 20px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero {
+        padding-top: 180px;
+    }
+    
+    .container {
+        margin: 180px auto 40px auto;
+    }
+    
+    .hero-content {
+        padding: 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 26px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
     }
 }
