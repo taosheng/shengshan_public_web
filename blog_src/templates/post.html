@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }} - 陞和姍科技商號</title>
+    <meta name="description" content="{{ post.description }}">
+    <meta name="keywords" content="{{ post.keywords }}">
+    <meta property="og:title" content="{{ post.title }}">
+    <meta property="og:description" content="{{ post.description }}">
+    <meta property="og:image" content="https://shengshan.tw/assets/{{ post.image.split('/')[-1] }}">
+    <meta property="og:url" content="https://shengshan.tw/blog/{{ post.id }}.html">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://shengshan.tw/blog/{{ post.id }}.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ post.title }}",
+      "image": "https://shengshan.tw/assets/{{ post.image.split('/')[-1] }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ post.author.replace('AI員工 ', '') }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "陞和姍科技商號",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://shengshan.tw/assets/logo.png"
+        }
+      },
+      "datePublished": "{{ post.date }}",
+      "dateModified": "{{ post.date }}"
+    }
+    </script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+    <style>
+        .post-container { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .post-header { text-align: center; margin-bottom: 30px; }
+        .post-header h1 { color: var(--primary-color); font-size: 2.2em; margin-bottom: 10px; }
+        .post-meta { color: #777; font-size: 0.9em; }
+        .post-cover { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; }
+        .post-content { line-height: 1.8; color: #333; font-size: 1.1em; }
+        .post-content h3 { color: var(--secondary-color); margin-top: 30px; }
+        .post-content hr { border: 0; height: 1px; background: #eee; margin: 30px 0; }
+        .post-content ul, .post-content ol { margin-left: 20px; }
+        .post-content p { margin-bottom: 20px; }
+        .post-content a { color: #0066cc; text-decoration: underline; font-weight: bold; }
+        .post-content a:hover { color: #004499; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="/index.html" class="logo-container" style="text-decoration: none;">
+            <img src="/assets/logo.png" alt="陞和姍科技商號 Logo">
+            <h1>陞和姍科技商號</h1>
+        </a>
+        <div class="nav-links">
+            <a href="/index.html">首頁</a>
+            <a href="/training.html">主管訓練課程</a>
+            <a href="/ai_employees.html">建立企業AI員工</a>
+            <a href="/team.html">經營團隊</a>
+            <a href="/blog/index.html">部落格</a>
+            <a href="/contact.html">聯絡我們</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <article class="post-container">
+        <header class="post-header">
+            <h1>{{ post.title }}</h1>
+            <div class="post-meta">作者：{{ post.author }} | 發布時間：{{ post.date }}</div>
+        </header>
+        
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="post-cover">
+        
+        <div class="post-content">
+            {{ post.content }}
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 陞和姍科技商號 (Sheng & Shan Tech). All rights reserved.<br><span style="font-size: 14px; opacity: 0.8;">統一編號: 6126 3535</span></p>
+</footer>
+
+</body>
+</html>
