@@ -42,7 +42,7 @@
 * **職責**：負責建構企業所需的系統，輔導中小型企業建立網路服務。
 * **主導專案（網頁僅需呈現概要，不需展示細節）**：
    (1) 數位刺青 digital tattoo https://tt.saltycat.tw/ (注意 網路查詢"tt.saltycat.tw 數位刺青" 統整摘要後在這裡說明)
-   (2) 良民查詢 https://saltycat.tw (注意 請搜尋 "saltycat.tw 良民查詢" 相關資料 用來放在這裡當說明
+   (2) 良民查詢 https://www.saltycat.tw (注意 請搜尋 "www.saltycat.tw 良民查詢" 相關資料 用來放在這裡當說明
    (3) AI電子報 https://news.saltycat.tw
      每週電子報 (Weekly News)**：快速為企業建立電子報系統，系統內的記者亦皆由 AI 擔任。
 
@@ -78,3 +78,9 @@
 如果有改善空間 請自行改善
 * 為了建立此網頁如果有暫時撰寫的python程式 請不用特別刪除 先留在tools目錄中 但不要checkin
 
+
+## 部落格 (Blog) 產生規範
+* **請勿**直接在根目錄手動建立任何 `.html` 檔案。
+* 若要新增文章，請在 `blog_src/posts/` 建立 `.md` 格式的 Markdown 檔案。
+* Markdown 檔案開頭必須包含 YAML frontmatter (包含 title, author, date, description, keywords, image 等屬性)。
+* 完成 Markdown 檔案後，請執行 `cd blog_src && ./build.sh` 進行編譯，系統會自動將 HTML 產生至 `blog/` 目錄下。
