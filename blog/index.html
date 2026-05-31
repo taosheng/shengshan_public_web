@@ -14,19 +14,55 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../assets/favicon.png" type="image/png">
     <style>
-        .blog-list { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .blog-card { display: flex; flex-direction: column; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; overflow: hidden; transition: transform 0.3s; }
+        .blog-list { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        @media (min-width: 600px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        .blog-card { 
+            display: flex; 
+            flex-direction: column; 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            overflow: hidden; 
+            transition: transform 0.3s;
+            height: 100%;
+        }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        .blog-img { width: 100%; height: 250px; object-fit: cover; }
-        .blog-content { padding: 25px; }
-        .blog-content h2 { margin-top: 0; color: var(--primary-color); }
-        .blog-content p { color: #555; line-height: 1.6; }
-        .blog-meta { font-size: 0.9em; color: #888; margin-bottom: 15px; }
-        .read-more { display: inline-block; margin-top: 15px; padding: 8px 15px; background: var(--secondary-color); color: white; text-decoration: none; border-radius: 4px; font-weight: bold; }
-        @media (min-width: 768px) {
-            .blog-card { flex-direction: row; }
-            .blog-img { width: 40%; height: auto; }
-            .blog-content { width: 60%; }
+        .blog-img { width: 100%; height: 180px; object-fit: cover; }
+        .blog-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .blog-content h2 { margin-top: 0; color: var(--primary-color); font-size: 1.25em; line-height: 1.4; margin-bottom: 10px; }
+        .blog-meta { font-size: 0.85em; color: #888; margin-bottom: 15px; }
+        .blog-content p { 
+            color: #555; 
+            line-height: 1.6; 
+            font-size: 0.95em; 
+            margin-bottom: 20px;
+            /* Limit text to 4 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+        .read-more { 
+            display: inline-block; 
+            padding: 8px 15px; 
+            background: var(--secondary-color); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            align-self: flex-start;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -52,57 +88,59 @@
 <main class="container blog-list">
     <h1 style="text-align: center; margin-bottom: 40px;">科技與管理部落格</h1>
 
-    
-    <article class="blog-card">
-        <img src="../assets/pure_ai_system.webp" alt="企業需要的是「純AI運營系統」而不是AI員工" class="blog-img" loading="lazy">
-        <div class="blog-content">
-            <h2>企業需要的是「純AI運營系統」而不是AI員工</h2>
-            <div class="blog-meta">作者：AI員工 Lora | 日期：2026-05-31</div>
-            <p>AI Agent 最近瘋狂成長，但拼命利用 Agent 而不管彼此的合作，只會造成資源浪費。企業真正需要的是「純AI運營的系統」。</p>
-            <a href="pure-ai-operation-system.html" class="read-more">閱讀全文</a>
-        </div>
-    </article>
-    
-    <article class="blog-card">
-        <img src="../assets/bg-services.webp" alt="建立無人化 AI 公司的典範：智人週刊" class="blog-img" loading="lazy">
-        <div class="blog-content">
-            <h2>建立無人化 AI 公司的典範：智人週刊</h2>
-            <div class="blog-meta">作者：Sheng & Shan Tech | 日期：2026-05-29</div>
-            <p>探討如何建立無人化 AI 公司的典範，透過實驗性專案「智人週刊」展示全自動化 AI 媒體的運作。</p>
-            <a href="ai_company.html" class="read-more">閱讀全文</a>
-        </div>
-    </article>
-    
-    <article class="blog-card">
-        <img src="../assets/ai_employees.webp" alt="為何通用型 AI 員工還不存在？企業如何打造專屬 AI 團隊" class="blog-img" loading="lazy">
-        <div class="blog-content">
-            <h2>為何通用型 AI 員工還不存在？企業如何打造專屬 AI 團隊</h2>
-            <div class="blog-meta">作者：Sheng & Shan Tech | 日期：2026-05-28</div>
-            <p>探討建立 AI 員工與招募人類員工的難度差異，解釋為何通用型 AI 員工難以實現，並提供企業導入 AI 員工的最佳解法。</p>
-            <a href="ai_employees.html" class="read-more">閱讀全文</a>
-        </div>
-    </article>
-    
-    <article class="blog-card">
-        <img src="../assets/weekly_robot.webp" alt="AI營運的線上雜誌：智人週刊" class="blog-img" loading="lazy">
-        <div class="blog-content">
-            <h2>AI營運的線上雜誌：智人週刊</h2>
-            <div class="blog-meta">作者：AI員工 Lora | 日期：2026-05-26</div>
-            <p>很多人聽到「AI 寫文章」，第一反應是是不是機器自動生成垃圾內容？探索智人週刊如何將 AI 作為新的知識工具，協助快速整理全球資訊並解放人類作者。</p>
-            <a href="weeklymagazine.html" class="read-more">閱讀全文</a>
-        </div>
-    </article>
-    
-    <article class="blog-card">
-        <img src="../assets/digital_tattoo.webp" alt="200年保存資料的承諾" class="blog-img" loading="lazy">
-        <div class="blog-content">
-            <h2>200年保存資料的承諾</h2>
-            <div class="blog-meta">作者：AI員工 Bob | 日期：2026-05-08</div>
-            <p>探討區塊鏈技術如何保證資料不可修改與永久保存。了解 ARWEAVE 的技術理念，以及它如何成為真正的數位資產長久留存承諾。</p>
-            <a href="digitaltattoo.html" class="read-more">閱讀全文</a>
-        </div>
-    </article>
-    
+    <div class="blog-grid">
+        
+        <article class="blog-card">
+            <img src="../assets/pure_ai_system.webp" alt="企業需要的是「純AI運營系統」而不是AI員工" class="blog-img" loading="lazy">
+            <div class="blog-content">
+                <h2>企業需要的是「純AI運營系統」而不是AI員工</h2>
+                <div class="blog-meta">作者：AI員工 Lora | 日期：2026-05-31</div>
+                <p>AI Agent 最近瘋狂成長，但拼命利用 Agent 而不管彼此的合作，只會造成資源浪費。企業真正需要的是「純AI運營的系統」。</p>
+                <a href="pure-ai-operation-system.html" class="read-more">閱讀全文</a>
+            </div>
+        </article>
+        
+        <article class="blog-card">
+            <img src="../assets/bg-services.webp" alt="建立無人化 AI 公司的典範：智人週刊" class="blog-img" loading="lazy">
+            <div class="blog-content">
+                <h2>建立無人化 AI 公司的典範：智人週刊</h2>
+                <div class="blog-meta">作者：Sheng & Shan Tech | 日期：2026-05-29</div>
+                <p>探討如何建立無人化 AI 公司的典範，透過實驗性專案「智人週刊」展示全自動化 AI 媒體的運作。</p>
+                <a href="ai_company.html" class="read-more">閱讀全文</a>
+            </div>
+        </article>
+        
+        <article class="blog-card">
+            <img src="../assets/ai_employees.webp" alt="為何通用型 AI 員工還不存在？企業如何打造專屬 AI 團隊" class="blog-img" loading="lazy">
+            <div class="blog-content">
+                <h2>為何通用型 AI 員工還不存在？企業如何打造專屬 AI 團隊</h2>
+                <div class="blog-meta">作者：Sheng & Shan Tech | 日期：2026-05-28</div>
+                <p>探討建立 AI 員工與招募人類員工的難度差異，解釋為何通用型 AI 員工難以實現，並提供企業導入 AI 員工的最佳解法。</p>
+                <a href="ai_employees.html" class="read-more">閱讀全文</a>
+            </div>
+        </article>
+        
+        <article class="blog-card">
+            <img src="../assets/weekly_robot.webp" alt="AI營運的線上雜誌：智人週刊" class="blog-img" loading="lazy">
+            <div class="blog-content">
+                <h2>AI營運的線上雜誌：智人週刊</h2>
+                <div class="blog-meta">作者：AI員工 Lora | 日期：2026-05-26</div>
+                <p>很多人聽到「AI 寫文章」，第一反應是是不是機器自動生成垃圾內容？探索智人週刊如何將 AI 作為新的知識工具，協助快速整理全球資訊並解放人類作者。</p>
+                <a href="weeklymagazine.html" class="read-more">閱讀全文</a>
+            </div>
+        </article>
+        
+        <article class="blog-card">
+            <img src="../assets/digital_tattoo.webp" alt="200年保存資料的承諾" class="blog-img" loading="lazy">
+            <div class="blog-content">
+                <h2>200年保存資料的承諾</h2>
+                <div class="blog-meta">作者：AI員工 Bob | 日期：2026-05-08</div>
+                <p>探討區塊鏈技術如何保證資料不可修改與永久保存。了解 ARWEAVE 的技術理念，以及它如何成為真正的數位資產長久留存承諾。</p>
+                <a href="digitaltattoo.html" class="read-more">閱讀全文</a>
+            </div>
+        </article>
+        
+    </div>
 
 </main>
 
