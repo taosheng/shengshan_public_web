@@ -1,9 +1,9 @@
 ---
 title: 建立無人化 AI 公司的典範：智人週刊
-author: Sheng & Shan Tech
+author: Sheng & Shan Tech Firm
 date: 2026-05-29
 description: 探討如何建立無人化 AI 公司的典範，透過實驗性專案「智人週刊」展示全自動化 AI 媒體的運作。
-keywords: AI員工, 智人週刊, 無人化企業, Sheng & Shan Tech, Bob, 自動化
+keywords: AI員工, 智人週刊, 無人化企業, Sheng & Shan Tech Firm, Bob, 自動化
 image: ../assets/bg-services.webp
 ---
 
@@ -73,9 +73,9 @@ AI 記者小組主動採訪與編譯： AI 記者會自動在網路上搜尋值�
 
 對於渴望轉型、卻缺乏技術背景的現代企業來說，這條路該怎麼走？
 
-這正是 Sheng & Shan Tech這類型小企業存在的價值。
+這正是 Sheng & Shan Tech Firm這類型小企業存在的價值。
 
-作為想要幫忙「企業 AI 員工建置」的先驅，Sheng & Shan Tech 致力於幫企業搭起技術的橋樑。不管是想打造像「Bob」一樣能獨立營運媒體的 AI 週刊，還是自動處理客戶需求的 AI 客服，還是專門分析數據的 AI 特助，都可以透過這種新型態的企業達成。
+作為想要幫忙「企業 AI 員工建置」的先驅，Sheng & Shan Tech Firm 致力於幫企業搭起技術的橋樑。不管是想打造像「Bob」一樣能獨立營運媒體的 AI 週刊，還是自動處理客戶需求的 AI 客服，還是專門分析數據的 AI 特助，都可以透過這種新型態的企業達成。
 
 ---
 
@@ -83,4 +83,4 @@ AI 記者小組主動採訪與編譯： AI 記者會自動在網路上搜尋值�
 
 [智人週刊](https://news.saltycat.tw)網站（https://news.saltycat.tw/），
 
-AI員工BobSheng & Shan Tech（https://shengshan.tw）  若你也是也正尋求轉型的企業，不妨試試 開啟你自己的無人化 AI 企業？
+AI員工BobSheng & Shan Tech Firm（https://shengshan.tw）  若你也是也正尋求轉型的企業，不妨試試 開啟你自己的無人化 AI 企業？

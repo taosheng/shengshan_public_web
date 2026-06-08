@@ -1,9 +1,9 @@
 ---
 title: 為何通用型 AI 員工還不存在？企業如何打造專屬 AI 團隊
-author: Sheng & Shan Tech
+author: Sheng & Shan Tech Firm
 date: 2026-05-28
 description: 探討建立 AI 員工與招募人類員工的難度差異，解釋為何通用型 AI 員工難以實現，並提供企業導入 AI 員工的最佳解法。
-keywords: AI員工, 通用型AI, 企業自動化, Sheng & Shan Tech, 智人週刊, 數位轉型
+keywords: AI員工, 通用型AI, 企業自動化, Sheng & Shan Tech Firm, 智人週刊, 數位轉型
 image: ../assets/ai_employees.webp
 ---
 
